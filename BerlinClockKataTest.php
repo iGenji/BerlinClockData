@@ -60,12 +60,27 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("XXXX", $actual);
     }
 
+    public function test_fiveMinutes_given0_shouldReturnXXXXXXXXXXX(){
+
+        $actual = $this->getFiveMinutes("0");
+
+        $this->assertEquals("XXXXXXXXXXX", $actual);
+    }
+
     /**
      * @return string
      */
     private function getMinutes($nbMinute): string
     {
         return $this->berlinClock->minutes($nbMinute);
+    }
+
+    /**
+     * @return string
+     */
+    private function getFiveMinutes($minute): string
+    {
+        return $this->berlinClock->fiveMinutes($minute);
     }
 
 

@@ -10,5 +10,21 @@ class BerlinClock{
         return "XXXX";
     }
 
+    public function fiveMinutes($minutes) : string{
+        if($minutes >= "60") return "XXXXXXXXXXX";
+        if($minutes >= "55") return "YYRYYRYYRYY";
+        if($minutes >= "50") return "YYRYYRYYRYX";
+        if($minutes >= "45") return "YYRYYRYYRXX";
+        if($minutes >= "40") return "YYRYYRYYXXX";
+        if($minutes >= "35") return "YYRYYRYXXXX";
+        if($minutes >= "30") return "YYRYYRXXXXX";
+        if($minutes >= "25") return "YYRYYXXXXXX";
+        if($minutes >= "20") return "YYRYXXXXXXX";
+        if($minutes >= "15") return "YYRXXXXXXXX";
+        if($minutes >= "10") return "YYXXXXXXXXX";
+        if($minutes >= "5") return "YXXXXXXXXXX";
+        return "XXXXXXXXXXX";
+    }
+
 
 }
