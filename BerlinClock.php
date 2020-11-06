@@ -47,5 +47,19 @@ class BerlinClock{
         return "R";
     }
 
+    public function translateToBerlinClockTime(string $hour) : string{
+        $separateHour = explode(":",$hour);
+        $nbHours = (string) $separateHour[0];
+        $nbMinutes = (string) $separateHour[1];
+        $nbSeconds = (string) $separateHour[2];
+        $clock = "";
+        $clock = $clock . $this->seconds($nbSeconds) . "\n";
+        $clock = $clock . $this->fiveHours($nbHours) . "\n";
+        $clock = $clock . $this->hours($nbHours) . "\n";
+        $clock = $clock . $this->fiveMinutes($nbMinutes) . "\n";
+        $clock = $clock . $this->minutes($nbMinutes);
+        return $clock;
+    }
+
 
 }

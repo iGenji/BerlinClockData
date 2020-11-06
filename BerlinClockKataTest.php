@@ -215,7 +215,12 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("R", $actual);
     }
 
+    public function test_translateToBerlinClock_given23h59m59s_shouldReturnX_RRRR_RRRX_YYRYYRYYRYY_YYYY(){
 
+        $actual = $this->berlinClock->translateToBerlinClockTime("23:59:59");
+
+        $this->assertEquals("X\nRRRR\nRRRX\nYYRYYRYYRYY\nYYYY",$actual);
+    }
 
     /**
      * @return string
