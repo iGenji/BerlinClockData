@@ -201,6 +201,22 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("R", $actual);
     }
 
+    public function test_seconds_given1_shouldReturnX(){
+
+        $actual = $this->getSeconds("1");
+
+        $this->assertEquals("X", $actual);
+    }
+
+    public function test_seconds_given2_shouldReturnR(){
+
+        $actual = $this->getSeconds("2");
+
+        $this->assertEquals("R", $actual);
+    }
+
+
+
     /**
      * @return string
      */
