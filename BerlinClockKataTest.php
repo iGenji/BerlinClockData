@@ -67,6 +67,62 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("XXXXXXXXXXX", $actual);
     }
 
+    public function test_fiveMinutes_given1_shouldReturnXXXXXXXXXXX(){
+
+        $actual = $this->getFiveMinutes("1");
+
+        $this->assertEquals("XXXXXXXXXXX", $actual);
+    }
+
+    public function test_fiveMinutes_given5_shouldReturnYXXXXXXXXXX(){
+
+        $actual = $this->getFiveMinutes("5");
+
+        $this->assertEquals("YXXXXXXXXXX", $actual);
+    }
+
+    public function test_fiveMinutes_given6_shouldReturnYXXXXXXXXXX(){
+
+        $actual = $this->getFiveMinutes("6");
+
+        $this->assertEquals("YXXXXXXXXXX", $actual);
+    }
+
+    public function test_fiveMinutes_given10_shouldReturnYYXXXXXXXXX(){
+
+        $actual = $this->getFiveMinutes("10");
+
+        $this->assertEquals("YYXXXXXXXXX", $actual);
+    }
+
+    public function test_fiveMinutes_given15_shouldReturnYYRXXXXXXXX(){
+
+        $actual = $this->getFiveMinutes("15");
+
+        $this->assertEquals("YYRXXXXXXXX", $actual);
+    }
+
+    public function test_fiveMinutes_given20_shouldReturnYYRYXXXXXXX(){
+
+        $actual = $this->getFiveMinutes("20");
+
+        $this->assertEquals("YYRYXXXXXXX", $actual);
+    }
+
+    public function test_fiveMinutes_given46_shouldReturnYYRYYRYYRXX(){
+
+        $actual = $this->getFiveMinutes("46");
+
+        $this->assertEquals("YYRYYRYYRXX", $actual);
+    }
+
+    public function test_fiveMinutes_given60_shouldReturnXXXXXXXXXXX(){
+
+        $actual = $this->getFiveMinutes("60");
+
+        $this->assertEquals("XXXXXXXXXXX", $actual);
+    }
+
     /**
      * @return string
      */
