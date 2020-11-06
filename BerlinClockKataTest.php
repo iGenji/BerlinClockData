@@ -1,7 +1,7 @@
 <?php
 require "vendor/autoload.php";
 require "BerlinClock.php";
-use BerlinClock;
+
 use PHPUnit\Framework\TestCase;
 
 class BerlinClockKataTest extends TestCase
@@ -23,6 +23,20 @@ class BerlinClockKataTest extends TestCase
         $actual = $this->getMinutes("0");
 
         $this->assertEquals("XXXX", $actual);
+    }
+
+    public function test_minutes_given1_shouldReturnYXXX(){
+
+        $actual = $this->getMinutes("1");
+
+        $this->assertEquals("YXXX", $actual);
+    }
+
+    public function test_minutes_given2_shouldReturnYYXX(){
+
+        $actual = $this->getMinutes("2");
+
+        $this->assertEquals("YYXX", $actual);
     }
 
     /**
