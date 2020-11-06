@@ -26,5 +26,13 @@ class BerlinClock{
         return "XXXXXXXXXXX";
     }
 
+    public function hours($nbHours) : string {
+        if($nbHours % 5 == "4") return "RRRR";
+        if($nbHours % 5 == "3") return "RRRX";
+        if($nbHours % 5 == "2") return "RRXX";
+        if($nbHours % 5 == "1") return "RXXX";
+        return "XXXX";
+    }
+
 
 }
