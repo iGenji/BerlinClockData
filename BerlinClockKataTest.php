@@ -194,6 +194,13 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("RRRR", $actual);
     }
 
+    public function test_seconds_given0_shouldReturnR(){
+
+        $actual = $this->getSeconds("0");
+
+        $this->assertEquals("R", $actual);
+    }
+
     /**
      * @return string
      */
@@ -224,6 +231,14 @@ class BerlinClockKataTest extends TestCase
     private function getFiveHours($hour): string
     {
         return $this->berlinClock->fiveHours($hour);
+    }
+
+    /**
+     * @return mixed
+     */
+    private function getSeconds($second)
+    {
+        return $this->berlinClock->seconds($second);
     }
 
 
