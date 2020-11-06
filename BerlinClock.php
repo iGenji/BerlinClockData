@@ -42,5 +42,10 @@ class BerlinClock{
         return "XXXX";
     }
 
+    public function seconds($nbSeconds) : string{
+        if($nbSeconds % 2 == "1") return "X";
+        return "R";
+    }
+
 
 }
