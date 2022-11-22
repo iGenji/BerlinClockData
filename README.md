@@ -1,4 +1,4 @@
-# BerlinClockData
+# BerlinClockData Unit testing pair programming
 
 Exercice de Bikorimana Patrick et Molitor Amaury
 
